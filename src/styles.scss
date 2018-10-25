@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+$raleway-font: 'Raleway', sans-serif;
+$font-family-sans-serif: $raleway-font;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* for "theme" switching you can create a class that overrides whatever you need,
+append it to something big like the body and toggle it on-off with a button or whatever. alternatively, slap your stylesheet in the
+header and you can switch to it in-browser View >> Page Style */
 
 @media (max-width: 576px) {
 
