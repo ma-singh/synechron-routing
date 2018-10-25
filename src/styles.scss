@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/alternates.scss";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* for "theme" switching you can create a class that overrides whatever you need,
+append it to something big like the body and toggle it on-off with a button or whatever. alternatively, slap your stylesheet in the
+header and you can switch to it in-browser View >> Page Style */
+
+@media (max-width: 576px) {
+
+  html {
+    height: 100%;
+    background-image: url('./assets/bridge.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #212529;
+
+    body {
+      background-color: #212529;
+      color: #f8f9fa;
+    }
+  }
+
+  #mainNav {
+    background-color: #343a40 !important;
+    z-index: 1000;
+
+    a {
+      color: #ced4da;
+    }
+
+    button {
+      background-color: #495057;
+      border-color: #343a40;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+
+      li {
+        color: #f8f9fa !important;
+        padding-left: 1rem !important;
+      }
+
+      li:hover {
+        background-color: #495057;
+        color: #adb5bd !important;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  /* this changes the display of the buttons on the personal details form
+  from horizontal to stacked at small screen widths */
+  ul.nav {
+    padding: 1rem !important;
+    display: inline-block;
+    width: 100%;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  form {
+    input {
+      height: 3rem;
+    }
+    select {
+      height: 2.75rem;
+    }
+  }
+}
