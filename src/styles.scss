@@ -52,7 +52,7 @@ header and you can switch to it in-browser View >> Page Style */
     }
   }
 
-  /* this changes the display of the buttons on the personal details form 
+  /* this changes the display of the buttons on the personal details form
   from horizontal to stacked at small screen widths */
   ul.nav {
     padding: 1rem !important;
@@ -61,6 +61,15 @@ header and you can switch to it in-browser View >> Page Style */
 
     a {
       width: 100%;
+    }
+  }
+
+  form {
+    input {
+      height: 3rem;
+    }
+    select {
+      height: 2.75rem;
     }
   }
 }
