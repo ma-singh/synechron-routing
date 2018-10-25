@@ -7,7 +7,7 @@
 append it to something big like the body and toggle it on-off with a button or whatever. alternatively, slap your stylesheet in the
 header and you can switch to it in-browser View >> Page Style */
 
-@media (max-width: 576px) {
+@include media-breakpoint-down(xs) {
 
   html {
     height: 100%;
@@ -20,6 +20,10 @@ header and you can switch to it in-browser View >> Page Style */
     body {
       background-color: #212529;
       color: #f8f9fa;
+
+      hr {
+        border-top-color: $gray-500;
+      }
     }
   }
 
@@ -65,9 +69,10 @@ header and you can switch to it in-browser View >> Page Style */
   }
 
   form {
-    input {
+    input:not(#ownerCheck) {
       height: 3rem;
     }
+
     select {
       height: 2.75rem;
     }
