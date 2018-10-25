@@ -1,8 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-$raleway-font: 'Raleway', sans-serif;
-$font-family-sans-serif: $raleway-font;
+@import "./assets/alternates.scss";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -19,53 +16,51 @@ header and you can switch to it in-browser View >> Page Style */
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #212529;
-  }
 
-  body {
-    background-color: #212529;
-    color: #f8f9fa;
+    body {
+      background-color: #212529;
+      color: #f8f9fa;
+    }
   }
 
   #mainNav {
     background-color: #343a40 !important;
     z-index: 1000;
+
+    a {
+      color: #ced4da;
+    }
+
+    button {
+      background-color: #495057;
+      border-color: #343a40;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+
+      li {
+        color: #f8f9fa !important;
+        padding-left: 1rem !important;
+      }
+
+      li:hover {
+        background-color: #495057;
+        color: #adb5bd !important;
+        border-radius: 0.25rem;
+      }
+    }
   }
 
-  #homeLink {
-    color: #ced4da;
-  }
-
-  .navbar-toggler {
-    background-color: #495057;
-    border-color: #343a40;
-  }
-
-  .navbar-nav {
-    margin-top: 0.5rem;
-  }
-
-  .nav-link {
-    color: #f8f9fa !important;
-    padding-left: 1rem !important;
-  }
-
-  .nav-link:hover {
-    background-color: #495057;
-    color: #adb5bd !important;
-    border-radius: 0.25rem;
-  }
-
-  hr {
-    border-top-color: #ced4da;
-  }
-
+  /* this changes the display of the buttons on the personal details form 
+  from horizontal to stacked at small screen widths */
   ul.nav {
     padding: 1rem !important;
     display: inline-block;
     width: 100%;
-  }
 
-  ul.nav a {
-    width: 100%;
+    a {
+      width: 100%;
+    }
   }
 }

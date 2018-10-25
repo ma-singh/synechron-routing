@@ -5,10 +5,10 @@ h1 {
 #formHeading {
   margin: auto;
   padding: 1rem;
-}
 
-ul {
-  padding: 2rem;
+  ul {
+    padding: 2rem;
+  }
 }
 
 form {
@@ -19,6 +19,10 @@ form {
 
   form {
     margin: 0 auto;
+
+    input {
+      height: 3rem;
+    }
   }
 
   h1 {
