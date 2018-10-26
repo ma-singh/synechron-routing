@@ -9,9 +9,11 @@
     </ul>
   </div>
   <hr />
-  <form #detailsForm="ngForm" class="justify-content-center col-sm-11 col-lg-8">
-    <div class="personal details">
-      <h2>Personal Details</h2>
+  <div class="collapsibles">
+  <div class="collapsible">
+    <input id="toggle1" type="checkbox">
+    <label id="label1" for="toggle1">Personal Details</label>
+    <div id="expand1">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputfirstName">First Name</label>
@@ -39,9 +41,11 @@
         </div>
       </div>
     </div>
-    <hr />
-    <div class="company details">
-      <h2>Company Details</h2>
+  </div>
+  <div class="collapsible">
+    <input id="toggle2" type="checkbox">
+    <label id="label2" for="toggle2">Company Details</label>
+    <div id="expand2">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputCompany">Company Name</label>
@@ -122,6 +126,135 @@
               <label class="form-check-label" for="ownerCheck">
                 I am the Owner of Company
               </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-success" id="collapsibleButton" style="display: unset; margin-left: 35%;" routerLink="/register/2">
+        Continue
+      </button>
+    </div>
+  </div>
+</div>
+
+
+  <form #detailsForm="ngForm" id="detailsForm" class="justify-content-center col-sm-11 col-lg-8">
+    <div class="personal details">
+      <h2>Personal Details</h2>
+      <div class="">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputfirstName">First Name</label>
+            <input type="text" class="form-control" id="inputfirstName" placeholder="First Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputlastName4">Last Name</label>
+            <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputmiddleName">Middle Name</label>
+            <input type="text" class="form-control" id="inputmiddleName" placeholder="Middle Name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputemail">E-mail Address</label>
+            <input type="email" class="form-control" id="inputemail" placeholder="name@example.com">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputphone">Phone Number</label>
+            <input type="tel" class="form-control" id="inputphone4" placeholder="(   )   -    ">
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="company details">
+      <h2>Company Details</h2>
+      <div class="">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCompany">Company Name</label>
+            <input type="text" class="form-control" id="inputCompany" placeholder="">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" placeholder="">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputState">State</label>
+            <select class="form-control" id="inputState">
+              <option selected>--</option>
+              <option>AL</option>
+              <option>AK</option>
+              <option>AZ</option>
+              <option>AR</option>
+              <option>CA</option>
+              <option>CO</option>
+              <option>CT</option>
+              <option>DE</option>
+              <option>DC</option>
+              <option>FL</option>
+              <option>GA</option>
+              <option>HI</option>
+              <option>ID</option>
+              <option>IL</option>
+              <option>IN</option>
+              <option>IA</option>
+              <option>KS</option>
+              <option>KY</option>
+              <option>LA</option>
+              <option>ME</option>
+              <option>MD</option>
+              <option>MA</option>
+              <option>MI</option>
+              <option>MN</option>
+              <option>MS</option>
+              <option>MO</option>
+              <option>MT</option>
+              <option>NE</option>
+              <option>NV</option>
+              <option>NH</option>
+              <option>NJ</option>
+              <option>NM</option>
+              <option>NY</option>
+              <option>NC</option>
+              <option>ND</option>
+              <option>OH</option>
+              <option>OK</option>
+              <option>OR</option>
+              <option>PA</option>
+              <option>RI</option>
+              <option>SC</option>
+              <option>SD</option>
+              <option>TN</option>
+              <option>TX</option>
+              <option>UT</option>
+              <option>VT</option>
+              <option>WA</option>
+              <option>WV</option>
+              <option>WI</option>
+              <option>WY</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputfeinID">FEIN ID</label>
+            <input type="text" class="form-control" id="inputfeinID" placeholder="">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-offset-6">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="ownerCheck">
+                <label class="form-check-label" for="ownerCheck">
+                  I am the Owner of Company
+                </label>
+              </div>
             </div>
           </div>
         </div>
