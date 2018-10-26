@@ -11,11 +11,68 @@ h1 {
   }
 }
 
+.collapsible {
+  display: none;
+
+  #toggle1, #toggle2 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 form {
   margin: 2rem auto;
 }
 
+/* ===== AT SMALL SCREENS ===== */
+
 @media (max-width: 576px) {
+
+  #detailsForm {
+    display: none;
+  }
+
+  div.collapsible {
+    display: contents;
+
+    #label1, #label2 {
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    #label1:hover, #label2:hover {
+      color: #555;
+    }
+
+    #label1::after, #label2::after {
+      content: ">";
+      margin-left: 0.5rem;
+      display: inline-block;
+    }
+
+    #expand1, #expand2 {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease-in;
+    }
+
+    #toggle1:checked ~ #expand1 {
+      height: 30rem;
+    }
+
+    #toggle1:checked ~#label1::after {
+      content: "^";
+    }
+
+    #toggle2:checked ~ #expand2 {
+      height: 30rem;
+    }
+
+    #toggle2:checked ~#label2::after {
+      content: "^";
+    }
+  }
 
   form {
     margin: 0 auto;
